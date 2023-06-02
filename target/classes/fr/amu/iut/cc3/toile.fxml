@@ -5,9 +5,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
 
 <HBox id="scene" prefHeight="420.0" prefWidth="650.0" spacing="20.0"  xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
-      stylesheets="@./style.css">
+      stylesheets="@style.css">
     <Pane prefHeight="400.0" prefWidth="400.0">
         <Circle centerX="200.0" centerY="200.0" radius="200.0" styleClass="toile" />
         <Circle centerX="200.0" centerY="200.0" radius="150.0" styleClass="toile" />
@@ -28,7 +29,7 @@
         <Text text="Compétence 6" x="26" y="99" />
         <Pane fx:id="toile" styleClass="toile" />
     </Pane>
-    <VBox alignment="CENTER" BorderPane.alignment="CENTER" spacing="20">
+    <VBox fx:id="vbox" alignment="CENTER" BorderPane.alignment="CENTER" spacing="20">
         <GridPane fx:id="gridPane">
             <columnConstraints>
                 <ColumnConstraints />
@@ -62,9 +63,11 @@
                 <TextField fx:id="Entree6" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             </children>
         </GridPane>
+        <Label fx:id="label1" />
+        <Label fx:id="label2" />
         <HBox alignment="CENTER" BorderPane.alignment="BOTTOM_CENTER" spacing="20">
-            <Button fx:id="Tracer"  text="Tracer" />
-            <Button fx:id="Vider"  text="Vider" />
+            <Button fx:id="Tracer"  text="Tracer" /><!--onAction="#ajouter"-->
+            <Button fx:id="Vider"  text="Vider" /><!--onAction="#vider"-->
         </HBox>
     </VBox>
 </HBox>
